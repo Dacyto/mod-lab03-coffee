@@ -29,7 +29,7 @@ STATES Automata::getState() {
 
 void Automata::getMenu() {
   for (int i = 0; i < 8; i++) {
-    cout << menu[i] << "  " << price[i] << " RUB" << endl;
+    cout << menu[i] << "  " << prices[i] << " RUB" << endl;
   }
 }
 
@@ -46,7 +46,7 @@ bool Automata::check() {
       return true;
   } else return false;
 }
-  
+
   void Automata::cook() {
     if (state == CHECK) {
       state = COOK;
@@ -63,7 +63,7 @@ int Automata::cancel() {
   }
   return change; // возвращаем деньги после отмены операции приготовл. напитка
 }
-  
+
 int Automata::finish() {
   int change = 0;
   if (state == COOK) {
