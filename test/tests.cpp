@@ -6,7 +6,7 @@
 TEST(task1, test1) {
   Automata Nier = Automata();
   Nier.on();
-  STATES rez = Nier.getState(); 
+  STATES rez = Nier.getState();
   EXPECT_EQ(WAIT, rez);
 }
 
@@ -14,7 +14,7 @@ TEST(task2, test2) {
     Automata Nier = Automata();
     Nier.on();
     Nier.coin(95);
-    STATES rez = Nier.getState(); 
+    STATES rez = Nier.getState();
     EXPECT_EQ(ACCEPT, rez);
 }
 
