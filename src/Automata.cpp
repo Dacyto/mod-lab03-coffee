@@ -61,7 +61,7 @@ int Automata::cancel() {
     state = WAIT;
     cash = 0;
   }
-  return change;
+  return change; // возвращаем деньги после отмены операции приготовл. напитка
 }
   
 int Automata::finish() {
