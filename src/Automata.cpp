@@ -32,3 +32,43 @@ void Automata::getMenu() {
     cout << menu[i] << "  " << price[i] << " RUB" << endl;
   }
 }
+
+void Automata::choice(int x) {
+  if (state == ACCEPT) {
+    state = CHECK;
+    variety = x -1;
+  }
+}
+
+bool Automata::check() {
+  if (state == CHECK) {
+    if (cash >= prices[variety])
+      return true;
+  } else return false;
+  
+  void Automata::cook() {
+    if (state == CHECK) {
+      state = COOK;
+      cash = cash - prices[variety];
+    }
+  }
+
+int Automata::cancel() {
+  int change = 0;
+  if (state == ACCEPT || state == CHECK) {
+    change = cash;
+    state = WAIT;
+    cash = 0;
+  }
+  return change;
+}
+  
+int Automata::finish() {
+  int change = 0;
+  if (state == COOK) {
+    state = WAIT;
+    change = cash;
+    cash = 0;
+  }
+  return change; // возвращаем сдачу после приготовления напитка
+}
