@@ -11,7 +11,7 @@ enum STATES {
   };
 
 class Automata {
-  private:
+ private:
     int cash;
     string menu[8] = {
       "Espresso",
@@ -23,13 +23,13 @@ class Automata {
       "Black Tea",
       "Hot Chocolate"
       };
-  int prices[8] = {
+    int prices[8] = {
     35, 40, 60, 75, 55, 65, 30, 50
     };
-  int variety;
-  STATES state;
-  
-  public:
+    int variety;
+    STATES state;
+
+ public:
     Automata();
     void on();
     void off();
