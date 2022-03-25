@@ -1,5 +1,6 @@
 // Copyright 2022 Dacyto
 
+#pragma once
 #include <iostream>
 #include <string>
 
