@@ -25,6 +25,7 @@ class Automata {
   int prices[8] = {
     35, 40, 60, 75, 55, 65, 30, 50
     };
+  int variety;
   STATES state;
   
   public:
