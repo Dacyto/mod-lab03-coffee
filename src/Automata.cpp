@@ -45,6 +45,7 @@ bool Automata::check() {
     if (cash >= prices[variety])
       return true;
   } else return false;
+}
   
   void Automata::cook() {
     if (state == CHECK) {
