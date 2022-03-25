@@ -41,10 +41,8 @@ void Automata::choice(int x) {
 }
 
 bool Automata::check() {
-  if (state == CHECK) {
-    if (cash >= prices[variety])
-      return true;
-  } else return false;
+    if (state == CHECK && cash >= prices[variety]) return true;
+    return false;
 }
 
   void Automata::cook() {
